@@ -6,5 +6,3 @@ Install cuda, cudnn
 Install python >= 3.6
 Install opencv-python 4.4.0.44
 Install dlib 19.21.0
-
-Define your own paths to save or load the dataset.
