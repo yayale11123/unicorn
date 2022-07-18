@@ -48,7 +48,7 @@ def Bland_Altman_Plot(data1, data2, path="", *args, **kwargs):
 
 
 def Linear_Fit(data1, data2):
-    z1 = np.polyfit(data1, data2, 1)  # 一次多项式拟合，相当于线性拟合
+    z1 = np.polyfit(data1, data2, 1)
     return z1
 
 
@@ -105,7 +105,7 @@ def show_signal(signal, fps, color, save_path='', title='', show=False, off=Fals
     plt.close("all")
 
 # bandpass_filter filters the signal, the cut-off frequency is [0.7-3] Hz.
-def bandpass_filter(raw_signal,fps):
+def bandpass_filter(raw_signal,fps=30):
     singal_mean = np.mean(raw_signal)
     b, a = signal.butter(8, 0.7 * 2 / fps, 'highpass')
     raw_signal = signal.filtfilt(b, a, raw_signal)
